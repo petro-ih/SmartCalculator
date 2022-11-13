@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Digit">
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:background">@drawable/bg_digit</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">64dp</item>
+        <item name="android:layout_height">64dp</item>
+        <item name="android:textSize">41sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:layout_rowWeight">1</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+    <style name="RightColumn" parent="Digit">
+        <item name="android:background">@drawable/bg_right_column</item>
+        <item name="android:textColor">@color/text_right_column</item>
+    </style>
+    <style name="Firstbtns" parent="Digit">
+        <item name="android:background">@drawable/bg_3firstbtns</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="Digit.Horizontal">
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:background">@drawable/bg_digit</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">14dp</item>
+        <item name="android:layout_height">14dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:layout_rowWeight">1</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+    <style name="RightColumn.Horizontal" parent="Digit.Horizontal">
+        <item name="android:background">@drawable/bg_right_column</item>
+        <item name="android:textColor">@color/text_right_column</item>
+    </style>
+    <style name="Firstbtns.Horizontal" parent="Digit.Horizontal">
+        <item name="android:background">@drawable/bg_3firstbtns</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="Buttons" parent="Digit.Horizontal">
+        <item name="android:background">@drawable/bg_buttons</item>
+    </style>
+</resources>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="#000">
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="bottom|end"
+        android:textColor="#fff"
+        android:textSize="48sp" />
+
+    <GridLayout
+        android:id="@+id/calcButtons"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:layout_gravity="bottom"
+        android:columnCount="4"
+        android:rowCount="5"
+        tools:ignore="HardcodedText">
+
+        <com.petro.calculator.GridTextView
+            android:id="@+id/buttonAC"
+            style="@style/Firstbtns"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:text="AC" />
+
+        <com.petro.calculator.GridTextView
+            android:id="@+id/buttonInverse"
+            style="@style/Firstbtns"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:text="±" />
+
+        <com.petro.calculator.GridTextView
+            android:id="@+id/buttonPercent"
+            style="@style/Firstbtns"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:text="%" />
+
+        <com.petro.calculator.GridTextView
+            android:id="@+id/buttonDivide"
+            style="@style/RightColumn"
+            android:layout_row="0"
+            android:layout_column="3"
+            android:text="/" />
+
+        <com.petro.calculator.GridTextView
+            android:id="@+id/button7"
+            style="@style/Digit"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:text="7" />
+
+        <com.petro.calculator.GridTextView
+            android:id="@+id/button8"
+            style="@style/Digit"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:text="8" />
+
+        <com.petro.calculator.GridTextView
+            android:id="@+id/button9"
+            style="@style/Digit"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:text="9" />
+
+        <com.petro.calculator.GridTextView
+            android:id="@+id/buttonMultiply"
+            style="@style/RightColumn"
+            android:layout_row="1"
+            android:layout_column="3"
+            android:text="x" />
+
+        <com.petro.calculator.GridTextView
+            android:id="@+id/button4"
+            style="@style/Digit"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:text="4" />
+
+        <com.petro.calculator.GridTextView
+            android:id="@+id/button5"
+            style="@style/Digit"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:text="5" />
+
+        <com.petro.calculator.GridTextView
+            android:id="@+id/button6"
+            style="@style/Digit"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:text="6" />
+
+        <com.petro.calculator.GridTextView
+            android:id="@+id/buttonMinus"
+            style="@style/RightColumn"
+            android:layout_row="2"
+            android:layout_column="3"
+            android:text="-" />
+
+        <com.petro.calculator.GridTextView
+            android:id="@+id/button1"
+            style="@style/Digit"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:text="1" />
+
+        <com.petro.calculator.GridTextView
+            android:id="@+id/button2"
+            style="@style/Digit"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:text="2" />
+
+        <com.petro.calculator.GridTextView
+            android:id="@+id/button3"
+            style="@style/Digit"
+            android:layout_row="3"
+            android:layout_column="2"
+            android:text="3" />
+
+        <com.petro.calculator.GridTextView
+            android:id="@+id/buttonPlus"
+            style="@style/RightColumn"
+            android:layout_row="3"
+            android:layout_column="3"
+            android:text="+" />
+
+        <com.petro.calculator.GridTextView
+            android:id="@+id/button0"
+            style="@style/Digit"
+            android:layout_width="0dp"
+            android:layout_row="4"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:layout_columnWeight="1"
+            android:text="@string/button0"
+            android:background="@drawable/bg_zero"/>
+
+        <com.petro.calculator.GridTextView
+            android:id="@+id/buttonPeriod"
+            style="@style/Digit"
+            android:layout_row="4"
+            android:layout_column="2"
+            android:text="," />
+
+        <com.petro.calculator.GridTextView
+            android:id="@+id/buttonEvaluate"
+            style="@style/RightColumn"
+            android:layout_row="4"
+            android:layout_column="3"
+            android:text="=" />
+    </GridLayout>
+</LinearLayout>

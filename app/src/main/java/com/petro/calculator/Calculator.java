@@ -1,6 +1,6 @@
 package com.petro.calculator;
 
-import  android.text.TextUtils;
+import android.text.TextUtils;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -17,7 +17,8 @@ public class Calculator {
     private static final String R_BRACKET = ")";
     private static final Map<String, Function<Double, Double>> FUNCTIONS_MAP = new HashMap<>();
     private static final Map<String, BiFunction<Double, Double, Double>> OPERATORS_MAP = new HashMap<>();
-    static  {
+
+    static {
         FUNCTIONS_MAP.put("S", Math::sin);
         FUNCTIONS_MAP.put("H", Math::sinh);
         FUNCTIONS_MAP.put("C", Math::cos);
@@ -32,9 +33,6 @@ public class Calculator {
         OPERATORS_MAP.put("-", (a, b) -> a - b);
         OPERATORS_MAP.put("*", (a, b) -> a * b);
         OPERATORS_MAP.put("/", (a, b) -> a / b);
-    }
-    private enum SymbolType {
-        DIGIT, OPERATION, FUNCTION, L_BRACKET, R_BRACKET, UNSUPPORTED
     }
 
     private static SymbolType getType(String value) {
@@ -139,7 +137,7 @@ public class Calculator {
         return Double.parseDouble(stack.pop());
     }
 
-    public static String calculate(String problem){
+    public static String calculate(String problem) {
         String problemWithReplacedSymbols = problem
                 .replace("sin", "S")
                 .replace("sinh", "H")
@@ -155,5 +153,9 @@ public class Calculator {
         String[] polishNotation = reversePolishNotation(tokens);
         double result = evaluate(polishNotation);
         return String.valueOf(result);
+    }
+
+    private enum SymbolType {
+        DIGIT, OPERATION, FUNCTION, L_BRACKET, R_BRACKET, UNSUPPORTED
     }
 }
